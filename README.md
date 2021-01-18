@@ -154,12 +154,13 @@
 
 ## Screen Recording
 *TODO* Provide a link to a screen recording of the project in action. Remember that the screencast should demonstrate:
-  - A working model
+ - A working model
  - Demo of the deployed  model
  - Demo of a sample request sent to the endpoint and its response
  
-    Full Recording : https://1drv.ms/u/s!AqbnW4s20s0s1gynpKjiB2YCDMGI?e=efm01A
-    Short Recording (5 Minitues) : https://1drv.ms/v/s!AqbnW4s20s0s1grRH4rLy6A0vbe7
+     Full Recording : https://1drv.ms/u/s!AqbnW4s20s0s1gynpKjiB2YCDMGI?e=efm01A
+     
+     Short Recording (5 Minitues) : https://1drv.ms/v/s!AqbnW4s20s0s1grRH4rLy6A0vbe7
 
 ## Standout Suggestions
 *TODO (Optional):* This is where you can provide information about any standout suggestions that you have attempted.
