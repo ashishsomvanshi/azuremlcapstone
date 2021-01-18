@@ -4,8 +4,7 @@
 
 ## ML Task to determine death event baaed on various risk factors from diffrent body parameters
 *TODO:* Write a short introduction to your project.
-    The required machinelearning infrastructure like endpoints, ml models not excluding the datset on Azure were created to predict the death event baaed on various risk factors from diffrent body parameters from the chossen datset.
-
+    The Experiment is to predict the death event baaed on various risk factors from diffrent body parameters from the chossen datset using Azure Machine Learning Studio and select the models generated via Hyperdive Confugration and via Azure AutoML.
 ## Project Set Up and Installation
 *OPTIONAL:* If your project has any special installation steps, this is where you should put it. To turn this project into a professional portfolio project, you are encouraged to explain how to set up this project in AzureML.
     The requireed azure ml workspace and experiment was created and azure ml studio was used to run Azure ML Notebooks which inturn ran on coumte vms and calulations were done via the jupyter notebook on a 4 node cluster of cloud based VMs of size STANDARD_D2_V2. To avoid duplication same compute resourses and datset created were used for both hyperdrive method and automl method.
