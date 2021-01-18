@@ -168,5 +168,5 @@
     a) Hyperdrvive Method: The code to comvert and save the .joblib model to .onnx model was excecuted from the jupyter notebook.
     b) AutoML Method: The automl config was sent a setting to enable the onnx output via the jupyter code and respective ..onnx model was saved in .onnx format.
     
-    ## Enable logging in your deployed web app.
+    ## Enable logging in your deployed web app
     Respective sevrive logs were colleced and application insights was enabled as true via jupyter notebook code.
