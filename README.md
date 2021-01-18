@@ -98,22 +98,22 @@
     
     Screenshot 1: RunDetails widget that shows the progress of the training runs of the different experiment
 <img src="https://github.com/ashishsomvanshi/azuremlcapstone/blob/master/images/Automl%20and%20Active%20Endpoint/AutoML%20Best%20Run%20Details%20Notebook.jpg"
-     alt="Image Showing Application Insights Were Enlabled"
+     alt="RunDetails widget that shows the progress of the training runs of the different experiment"
      style="float: left; margin-right: 10px;" />
 
      Screenshot 2: RunDetails Wizard Completed
 <img src=" https://github.com/ashishsomvanshi/azuremlcapstone/blob/master/images/Automl%20and%20Active%20Endpoint/AutoML%20RunDetailWizard%20Completed%20.jpg"
-     alt="Image Showing Application Insights Were Enlabled"
+     alt="RunDetails Wizard Completed"
      style="float: left; margin-right: 10px;" />
 
      Screenshot 3: Remote Run Completed
 <img src="https://github.com/ashishsomvanshi/azuremlcapstone/blob/master/images/Automl%20and%20Active%20Endpoint/Automl%20Run%20Completion%20Details%201.jpg"
-     alt="Image Showing Application Insights Were Enlabled"
+     alt="Remote Run Completed"
      style="float: left; margin-right: 10px;" />
 
      Screenshot 4: Best Run Details Completed (Visual 1)
 <img src="https://github.com/ashishsomvanshi/azuremlcapstone/blob/master/images/Automl%20and%20Active%20Endpoint/Automl%20Best%20Run%20Shown.jpg"
-     alt="Image Showing Application Insights Were Enlabled"
+     alt="Best Run Details Completed (Visual 1)"
      style="float: left; margin-right: 10px;" />
 
      Screenshot 5: Best Run Details Completed 
@@ -123,22 +123,22 @@
 
      Screenshot 6: Best Run Metrics
 <img src="https://github.com/ashishsomvanshi/azuremlcapstone/blob/master/images/Automl%20and%20Active%20Endpoint/Automl%20Best%20Run.jpg"
-     alt="Image Showing Application Insights Were Enlabled"
+     alt="Best Run Metrics"
      style="float: left; margin-right: 10px;" />
 
      Screenshot 7: Best Run Metrics (Visual 1)
 <img src="https://github.com/ashishsomvanshi/azuremlcapstone/blob/master/images/Automl%20and%20Active%20Endpoint/AutoML%20Best%20Run%2041%20.jpg"
-     alt="Image Showing Application Insights Were Enlabled"
+     alt="Best Run Metrics (Visual 1)"
      style="float: left; margin-right: 10px;" />
 
      Screenshot 8: Best Run Metrics (Visual 2)
 <img src="https://github.com/ashishsomvanshi/azuremlcapstone/blob/master/images/Automl%20and%20Active%20Endpoint/AutoML%20Best%20Run%2041%20%20Metrics.jpg"
-     alt="Image Showing Application Insights Were Enlabled"
+     alt="Best Run Metrics (Visual 2)"
      style="float: left; margin-right: 10px;" />
 
      Screenshot 9: Best Run Metrics (Visual 3)
 <img src="https://github.com/ashishsomvanshi/azuremlcapstone/blob/master/images/Automl%20and%20Active%20Endpoint/AutoML%20Best%20Run%2041%20%20Metrics%202.jpg"
-     alt="Image Showing Application Insights Were Enlabled"
+     alt="Best Run Metrics (Visual 3)"
      style="float: left; margin-right: 10px;" />
 
 ## Improving Results
@@ -187,7 +187,41 @@
 *TODO*: What are the results you got with your model? What were the parameters of the model? How could you have improved it?
 *TODO* Remeber to provide screenshots of the `RunDetails` widget as well as a screenshot of the best model trained with it's parameters.
     With the above selected confugration the Hyperdrive Pipeline shows best results with --c = 500 and --max_iter = 50 giving accuracy of  0.8133333333333334(approximate).
-    Screenshots: https://github.com/ashishsomvanshi/azuremlcapstone/tree/master/images/Hyperdrive
+     Screenshot 1: RunDetails Wizard Completed
+<img src="https://github.com/ashishsomvanshi/azuremlcapstone/blob/master/images/Hyperdrive/Hyperdrive%20RunDetails%20Wizard%20after%20Completion.jpg"
+     alt="RunDetails Wizard Completed"
+     style="float: left; margin-right: 10px;" />
+
+     Screenshot 2: Remote Run Completed and Hyper Parameters for Sample of Diffrent Runs
+<img src="https://github.com/ashishsomvanshi/azuremlcapstone/blob/master/images/Hyperdrive/Hyperparmaters%20Diffrent%20Runs.jpg"
+     alt="Remote Run Completed and Hyper Parameters for Sample of Diffrent Runs"
+     style="float: left; margin-right: 10px;" />
+
+     Screenshot 3: Best Run Completed (Visual 1)
+<img src="https://github.com/ashishsomvanshi/azuremlcapstone/blob/master/images/Hyperdrive/HyperDrvire%20Run%20Completion%20in%20Notebook.jpg"
+     alt="Best Run Completed (Visual 1)"
+     style="float: left; margin-right: 10px;" />
+
+     Screenshot 4: Best Run Details Completed (Visual 2)
+<img src="https://github.com/ashishsomvanshi/azuremlcapstone/blob/master/images/Hyperdrive/Hyperdrive%20Best%20Run.jpg"
+     alt="Best Run Details Completed (Visual 2)"
+     style="float: left; margin-right: 10px;" />
+
+     Screenshot 5: Best Run Details Completed (Visual 3)
+<img src="https://github.com/ashishsomvanshi/azuremlcapstone/blob/master/images/Hyperdrive/HyperDrive%20Best%20Model%20Run%2024.jpg"
+     alt="Best Run Details Completed (Visual 3)"
+     style="float: left; margin-right: 10px;" />
+
+     Screenshot 6: Best Run Metrics (Visual 1)
+<img src="https://github.com/ashishsomvanshi/azuremlcapstone/blob/master/images/Hyperdrive/Hyperdrive%20Best%20Run%20Model%20Metrices.jpg"
+     alt="Best Run Metrics (Visual 1)"
+     style="float: left; margin-right: 10px;" />
+
+     Screenshot 7: Best Run Metrics (Visual 2)
+<img src="https://github.com/ashishsomvanshi/azuremlcapstone/blob/master/images/Hyperdrive/HyperDrive%20Best%20Model%20Notebook.jpg"
+     alt="Best Run Metrics (Visual 2)"
+     style="float: left; margin-right: 10px;" />
+     
 ## Improving Results
     In future we can improve the best model by choosing different primary metrics and different classification methods and calculating and comparing the values of mean_squared_error, to study how our predictions have deviated from actual values and, we study mean absolute percent error (MAPE) in detail. We can also study the impact of increasing number of clusters used to study to get faster results. All these could help us in reducing error in our model and help us to study the model much faster. We can also add more data to the model, or we can add more columns. Also, we can make new columns with existing ones with feature engineering and by applying our domain knowledge and obtain better results. Also, we can provide a more user-friendly user interface wile consuming the api’s and the swager documentation. Lot of steps run on command-line can be ran directly from Jyupiter notebook or could be automated in a single script. We do have room to select more hyperparameters to tune in addtion to the two selected and tuned.
     
@@ -195,14 +229,14 @@
 *TODO*: Give an overview of the deployed model and instructions on how to query the endpoint with a sample input.
     The best performing model was a model with acuuracy of aproximately .0.8926726726726727 with AUC_weight =  0.9208363636363636 using VotingEnsemble algoritim obtained via AutoML Method. The respective model was registered and deployed as rest endpoint via a scoring uri and the deployment was verified by sending two sets of data picked from the original dataset and sent as JSON data to the service and the service predicted the output correctly.
     
-    Screenshot 1: Active Endpoint
+    Screenshot 1: Active Endpoint for Depoloyed Model
 <img src="https://github.com/ashishsomvanshi/azuremlcapstone/blob/master/images/Automl%20and%20Active%20Endpoint/Active%20Endpoint.jpg"
-     alt="Image Showing Application Insights Were Enlabled"
+     alt="Active Endpoint"
      style="float: left; margin-right: 10px;" />
 
      Screenshot 2: Active Endpoint for Depoloyed Model Tested
 <img src="https://github.com/ashishsomvanshi/azuremlcapstone/blob/master/images/Automl%20and%20Active%20Endpoint/AutoML%20Depyment%20Test%20Result.jpg"
-     alt="Image Showing Application Insights Were Enlabled"
+     alt="Active Endpoint for Depoloyed Model Tested"
      style="float: left; margin-right: 10px;" />
 
 ## Screen Recording
@@ -229,7 +263,7 @@
 
      Screenshot 2: Code excecution of genration of .onnx model for AutoML Method
 <img src="https://github.com/ashishsomvanshi/azuremlcapstone/blob/master/images/Automl%20and%20Active%20Endpoint/AutoML%20Best%20model%20and%20Onnx%20Model.png"
-     alt="Image Showing Application Insights Were Enlabled"
+     alt="Code excecution of genration of .onnx model for AutoML Method"
      style="float: left; margin-right: 10px;" />
     
     Enable logging in your deployed web app
@@ -237,5 +271,5 @@
     
      Screenshot 3: Application Insights Were Enlabled
 <img src="https://github.com/ashishsomvanshi/azuremlcapstone/blob/master/images/Standouts/Application%20Insight%20True.jpg"
-     alt="Image Showing Application Insights Were Enlabled"
+     alt="Application Insights Were Enlabled"
      style="float: left; margin-right: 10px;" />
