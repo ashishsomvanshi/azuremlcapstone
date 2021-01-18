@@ -163,10 +163,25 @@
 
 ## Standout Suggestions
 *TODO (Optional):* This is where you can provide information about any standout suggestions that you have attempted.
-    ScreenShots: https://github.com/ashishsomvanshi/azuremlcapstone/tree/master/images/Standouts
-    ## Convert Your Model to ONNX Format
+   
+    Convert Your Model to ONNX Format
     a) Hyperdrvive Method: The code to comvert and save the .joblib model to .onnx model was excecuted from the jupyter notebook.
     b) AutoML Method: The automl config was sent a setting to enable the onnx output via the jupyter code and respective ..onnx model was saved in .onnx format.
     
-    ## Enable logging in your deployed web app
+    Screenshot 1: Code excecution of .joblib model converstion to .onnx model for HyperDerive Method
+<img src="https://github.com/ashishsomvanshi/azuremlcapstone/blob/master/images/Standouts/Hyperdrive%20ONNX%20Convertion.jpg"
+     alt="Image Showing Application Insights Were Enlabled"
+     style="float: left; margin-right: 10px;" />
+
+     Screenshot 2: Code excecution of genration of .onnx model for AutoML Method
+<img src="https://github.com/ashishsomvanshi/azuremlcapstone/blob/master/images/Automl%20and%20Active%20Endpoint/AutoML%20Best%20model%20and%20Onnx%20Model.png"
+     alt="Image Showing Application Insights Were Enlabled"
+     style="float: left; margin-right: 10px;" />
+    
+    Enable logging in your deployed web app
     Respective sevrive logs were colleced and application insights was enabled as true via jupyter notebook code.
+    
+     Screenshot 3: Application Insights Were Enlabled
+<img src="https://github.com/ashishsomvanshi/azuremlcapstone/blob/master/images/Standouts/Application%20Insight%20True.jpg"
+     alt="Image Showing Application Insights Were Enlabled"
+     style="float: left; margin-right: 10px;" />
