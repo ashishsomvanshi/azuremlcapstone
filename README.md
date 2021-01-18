@@ -102,7 +102,7 @@
      style="float: left; margin-right: 10px;" />
 
      Screenshot 2: RunDetails Wizard Completed
-<img src=" https://github.com/ashishsomvanshi/azuremlcapstone/blob/master/images/Automl%20and%20Active%20Endpoint/AutoML%20RunDetailWizard%20Completed%20.jpg"
+<img src="https://github.com/ashishsomvanshi/azuremlcapstone/blob/master/images/Automl%20and%20Active%20Endpoint/AutoML%20RunDetailWizard%20Completed%20.jpg"
      alt="RunDetails Wizard Completed"
      style="float: left; margin-right: 10px;" />
 
