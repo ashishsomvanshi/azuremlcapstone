@@ -187,6 +187,7 @@
 *TODO*: What are the results you got with your model? What were the parameters of the model? How could you have improved it?
 *TODO* Remeber to provide screenshots of the `RunDetails` widget as well as a screenshot of the best model trained with it's parameters.
     With the above selected confugration the Hyperdrive Pipeline shows best results with --c = 500 and --max_iter = 50 giving accuracy of  0.8133333333333334(approximate).
+    
      Screenshot 1: RunDetails Wizard Completed
 <img src="https://github.com/ashishsomvanshi/azuremlcapstone/blob/master/images/Hyperdrive/Hyperdrive%20RunDetails%20Wizard%20after%20Completion.jpg"
      alt="RunDetails Wizard Completed"
