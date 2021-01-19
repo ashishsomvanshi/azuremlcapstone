@@ -1,6 +1,3 @@
-## Note :
-     The Deletion Section Shows an Error simply because the deployed Endpoint Service was deleted priror to deletion of compute target. Also the Notebooks are direct download of the code on Azure ML Studio. The same can be observed in the Full Video Recording Provided in the Screencast Section. 
-
 ## ML Task to determine death event baaed on various risk factors from different body parameters
     The Experiment is to predict the death event baaed on various risk factors from diffrent body parameters from the chossen datset using Azure Machine Learning Studio and select the models generated via Hyperdive Confugration and via Azure AutoML.
 ## Project Set Up and Installation
