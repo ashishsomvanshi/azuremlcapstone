@@ -93,7 +93,7 @@
      style="float: left; margin-right: 10px;" />
      
      Screenshot 1A: RunDetails widget that shows the progress of the training runs of the different experiment
-<img src="https://github.com/ashishsomvanshi/azuremlcapstone/blob/master/images/Automl/screenshot1.jpg"
+<img src="https://github.com/ashishsomvanshi/azuremlcapstone/blob/master/images/Automl/screenshot1A.jpg"
      alt="RunDetails widget that shows the progress of the training runs of the different experiment (A)"
      style="float: left; margin-right: 10px;" />
      
