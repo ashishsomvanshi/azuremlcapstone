@@ -10,8 +10,6 @@
 ## Overview
     The Dataset website: https://archive.ics.uci.edu/ml/datasets/Heart+failure+clinical+records
     The Dataset URL: https://archive.ics.uci.edu/ml/machine-learning-databases/00519/heart_failure_clinical_records_dataset.csv
-    Size of Training Dataset : 75% of Sample Dataset
-    Size of Test Datset: 25% of Sample Dataset
     
 ## Source:
     The current version of the dataset was elaborated by Davide Chicco (Krembil Research Institute, Toronto, Canada) and donated to the University of California Irvine Machine Learning Repository under the same Attribution 4.0 International (CC BY 4.0) copyright in January 2020. Davide Chicco can be reached at <davidechicco '@' davidechicco.it>
@@ -56,6 +54,8 @@
 
 ## Access
     The Data was accesed via the Dataset URL: https://archive.ics.uci.edu/ml/machine-learning-databases/00519/heart_failure_clinical_records_dataset.csv and loded into Azure ML Studio via python code in juypter notebook and required tabular Azure ML Dataset was created and consumed as reuired. To avoid duplication same Azure ML DAtaset was used for both hyperdrive method and automl method.
+    Size of Training Dataset : 75% of Sample Dataset
+    Size of Test Datset: 25% of Sample Dataset
 
 ## Automated ML
 ## Classification technique used:
