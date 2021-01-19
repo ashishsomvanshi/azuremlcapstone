@@ -228,7 +228,7 @@
      style="float: left; margin-right: 10px;" />
 
      Screenshot 2: Active Endpoint for Depoloyed Model Tested
-<img src="https://github.com/ashishsomvanshi/azuremlcapstone/blob/master/images/Hperdrive/screenshot2.jpg"
+<img src="https://github.com/ashishsomvanshi/azuremlcapstone/blob/master/images/Endpoints/screenshot2.jpg"
      alt="Active Endpoint for Depoloyed Model Tested"
      style="float: left; margin-right: 10px;" />
 
