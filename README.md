@@ -181,32 +181,32 @@
     With the above selected confugration the Hyperdrive Pipeline shows best results with --c = 1 and --max_iter = 50 giving accuracy of  0.8133333333333334(approximate).
         
      Screenshot 1: RunDetails Wizard Completed
-<img src="https://github.com/ashishsomvanshi/azuremlcapstone/blob/master/images/Hperdrive/screenshot1.jpg"
+<img src="https://github.com/ashishsomvanshi/azuremlcapstone/blob/master/images/Hyperdrive/screenshot1.jpg"
      alt="RunDetails Wizard Completed"
      style="float: left; margin-right: 10px;" />
 
      Screenshot 2: Remote Run Completed and Hyper Parameters for Sample of Diffrent Runs
-<img src="https://github.com/ashishsomvanshi/azuremlcapstone/blob/master/images/Hperdrive/screenshot2.jpg"
+<img src="https://github.com/ashishsomvanshi/azuremlcapstone/blob/master/images/Hyperdrive/screenshot2.jpg"
      alt="Remote Run Completed and Hyper Parameters for Sample of Diffrent Runs"
      style="float: left; margin-right: 10px;" />
 
      Screenshot 3: Best Run Completed (Visual 1)
-<img src="https://github.com/ashishsomvanshi/azuremlcapstone/blob/master/images/Hperdrive/screenshot3.jpg"
+<img src="https://github.com/ashishsomvanshi/azuremlcapstone/blob/master/images/Hyperdrive/screenshot3.jpg"
      alt="Best Run Completed (Visual 1)"
      style="float: left; margin-right: 10px;" />
 
      Screenshot 4: Best Run Details Completed (Visual 2)
-<img src="https://github.com/ashishsomvanshi/azuremlcapstone/blob/master/images/Hperdrive/screenshot4.jpg"
+<img src="https://github.com/ashishsomvanshi/azuremlcapstone/blob/master/images/Hyperdrive/screenshot4.jpg"
      alt="Best Run Details Completed (Visual 2)"
      style="float: left; margin-right: 10px;" />
 
      Screenshot 5: Best Run Details Completed (Visual 3)
-<img src="https://github.com/ashishsomvanshi/azuremlcapstone/blob/master/images/Hperdrive/screenshot5.jpg"
+<img src="https://github.com/ashishsomvanshi/azuremlcapstone/blob/master/images/Hyperdrive/screenshot5.jpg"
      alt="Best Run Details Completed (Visual 3)"
      style="float: left; margin-right: 10px;" />
 
      Screenshot 6: Best Run Metrics (Visual 1)
-<img src="https://github.com/ashishsomvanshi/azuremlcapstone/blob/master/images/Hperdrive/screenshot6.jpg"
+<img src="https://github.com/ashishsomvanshi/azuremlcapstone/blob/master/images/Hyperdrive/screenshot6.jpg"
      alt="Best Run Metrics (Visual 1)"
      style="float: left; margin-right: 10px;" />
      
