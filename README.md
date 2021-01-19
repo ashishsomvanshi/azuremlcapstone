@@ -118,16 +118,11 @@
      style="float: left; margin-right: 10px;" />
 
      Screenshot 7: Best Run Metrics (Visual 1)
-<img src="https://github.com/ashishsomvanshi/azuremlcapstone/blob/master/images/Automl%20and%20Active%20Endpoint/AutoML%20Best%20Run%2041%20.jpg"
-     alt="Best Run Metrics (Visual 1)"
-     style="float: left; margin-right: 10px;" />
-
-     Screenshot 8: Best Run Metrics (Visual 2)
 <img src="https://github.com/ashishsomvanshi/azuremlcapstone/blob/master/images/Automl%20and%20Active%20Endpoint/AutoML%20Best%20Run%2041%20%20Metrics.jpg"
      alt="Best Run Metrics (Visual 2)"
      style="float: left; margin-right: 10px;" />
 
-     Screenshot 9: Best Run Metrics (Visual 3)
+     Screenshot 8: Best Run Metrics (Visual 2)
 <img src="https://github.com/ashishsomvanshi/azuremlcapstone/blob/master/images/Automl%20and%20Active%20Endpoint/AutoML%20Best%20Run%2041%20%20Metrics%202.jpg"
      alt="Best Run Metrics (Visual 3)"
      style="float: left; margin-right: 10px;" />
