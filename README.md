@@ -91,7 +91,12 @@
 <img src="https://github.com/ashishsomvanshi/azuremlcapstone/blob/master/images/Automl/screenshot1.jpg"
      alt="RunDetails widget that shows the progress of the training runs of the different experiment"
      style="float: left; margin-right: 10px;" />
-
+     
+     Screenshot 1A: RunDetails widget that shows the progress of the training runs of the different experiment
+<img src="https://github.com/ashishsomvanshi/azuremlcapstone/blob/master/images/Automl/screenshot1.jpg"
+     alt="RunDetails widget that shows the progress of the training runs of the different experiment (A)"
+     style="float: left; margin-right: 10px;" />
+     
      Screenshot 2: RunDetails Wizard Completed
 <img src="https://github.com/ashishsomvanshi/azuremlcapstone/blob/master/images/Automl/screenshot2.jpg"
      alt="RunDetails Wizard Completed"
