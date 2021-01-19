@@ -220,7 +220,7 @@
     In future we can improve the best model by choosing different primary metrics and different classification methods and calculating and comparing the values of mean_squared_error, to study how our predictions have deviated from actual values and, we study mean absolute percent error (MAPE) in detail. We can also study the impact of increasing number of clusters used to study to get faster results. All these could help us in reducing error in our model and help us to study the model much faster. We can also add more data to the model, or we can add more columns. Also, we can make new columns with existing ones with feature engineering and by applying our domain knowledge and obtain better results. Also, we can provide a more user-friendly user interface wile consuming the api’s and the swager documentation. Lot of steps run on command-line can be ran directly from Jyupiter notebook or could be automated in a single script. We do have room to select more hyperparameters to tune in addtion to the two selected and tuned.
     
 ## Model Deployment
-    The best performing model was a model with acuuracy of aproximately .0.87934 with AUC_weight =  0.92554 using VotingEnsemble algoritim obtained via AutoML Method. The respective model was registered and deployed as rest endpoint via a scoring uri and the deployment was verified by sending two sets of data picked from the original dataset and sent as JSON data to the service and the service predicted the output correctly.
+    The best performing model was a model with acuuracy of aproximately .0.87934 with AUC_weight =  0.92554 using VotingEnsemble algoritim obtained via AutoML Method. The respective model was registered and the best model was exposed as Rest web service endpoint on ACI. The Scoring URI and the Swageer.JSON URI can be used to feed the JSON payload and obtain the prediction for the target cloumn in JSON format via code and Swager UI(if avilable).The payload used in this methodisa two sets of data picked from the original dataset and sent as JSON data to the service and the service predicted the output correctly.
     
     Screenshot 1: Active Endpoint for Depoloyed Model
 <img src="https://github.com/ashishsomvanshi/azuremlcapstone/blob/master/images/Endpoints/screenshot1.jpg"
@@ -234,7 +234,7 @@
 
 ## Screen Recording
      Full Recording Without Voice: https://1drv.ms/u/s!AqbnW4s20s0s1hrJxYLm7kivaxgu?e=ZhlmqV
-     Short Recording With Voice (18 Minitues): https://1drv.ms/v/s!AqbnW4s20s0s1h98Kpw-Wx_jus_B
+     Short Recording With Voice (4.10 Minitues): https://1drv.ms/v/s!AqbnW4s20s0s1xphSBSwzV3iQlk9
      
 ## Standout Suggestions
     Convert Your Model to ONNX Format
