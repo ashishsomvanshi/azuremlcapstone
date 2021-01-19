@@ -10,6 +10,9 @@
 ## Overview
     The Dataset website: https://archive.ics.uci.edu/ml/datasets/Heart+failure+clinical+records
     The Dataset URL: https://archive.ics.uci.edu/ml/machine-learning-databases/00519/heart_failure_clinical_records_dataset.csv
+    Size of Training Dataset : 75% of Sample Dataset
+    Size of Test Datset: 25% of Sample Dataset
+    
 ## Source:
     The current version of the dataset was elaborated by Davide Chicco (Krembil Research Institute, Toronto, Canada) and donated to the University of California Irvine Machine Learning Repository under the same Attribution 4.0 International (CC BY 4.0) copyright in January 2020. Davide Chicco can be reached at <davidechicco '@' davidechicco.it>
 
