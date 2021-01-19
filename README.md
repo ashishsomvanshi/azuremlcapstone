@@ -228,10 +228,9 @@
      style="float: left; margin-right: 10px;" />
 
 ## Screen Recording
-     Full Recording : [Link to Video] (https://1drv.ms/u/s!AqbnW4s20s0s1gynpKjiB2YCDMGI?e=efm01A)
-     Short Recording (18 Minitues) : [Link to Video] (hhttps://1drv.ms/v/s!AqbnW4s20s0s1h98Kpw-Wx_jus_B)
+     Full Recording Without Voice: https://1drv.ms/u/s!AqbnW4s20s0s1hrJxYLm7kivaxgu?e=ZhlmqV
+     Short Recording With Voice (18 Minitues): https://1drv.ms/v/s!AqbnW4s20s0s1h98Kpw-Wx_jus_B
      
-
 ## Standout Suggestions
     Convert Your Model to ONNX Format
     a) Hyperdrvive Method: The code to comvert and save the .joblib model to .onnx model was excecuted from the jupyter notebook.
