@@ -1,17 +1,13 @@
-*NOTE:* This file is a template that you can use to create the README for your project. The *TODO* comments below will highlight the information you should be sure to include.
 ## Note :
      The Deletion Section Shows an Error simply because the deployed Endpoint Service was deleted priror to deletion of compute target. Also the Notebooks are direct download of the code on Azure ML Studio. The same can be observed in the Full Video Recording Provided in the Screencast Section. 
 
 ## ML Task to determine death event baaed on various risk factors from different body parameters
-*TODO:* Write a short introduction to your project.
     The Experiment is to predict the death event baaed on various risk factors from diffrent body parameters from the chossen datset using Azure Machine Learning Studio and select the models generated via Hyperdive Confugration and via Azure AutoML.
 ## Project Set Up and Installation
-*OPTIONAL:* If your project has any special installation steps, this is where you should put it. To turn this project into a professional portfolio project, you are encouraged to explain how to set up this project in AzureML.
     The requireed azure ml workspace and experiment was created and azure ml studio was used to run Azure ML Notebooks which inturn ran on coumte vms and calulations were done via the jupyter notebook on a 4 node cluster of cloud based VMs of size STANDARD_D2_V2. To avoid duplication same compute resourses and datset created were used for both hyperdrive method and automl method.
 
 ## Dataset
 ## Overview
-*TODO*: Explain about the data you are using and where you got it from.
     The Dataset website: https://archive.ics.uci.edu/ml/datasets/Heart+failure+clinical+records
     The Dataset URL: https://archive.ics.uci.edu/ml/machine-learning-databases/00519/heart_failure_clinical_records_dataset.csv
 ## Source:
@@ -22,7 +18,6 @@
     Davide Chicco, Giuseppe Jurman: "Machine learning can predict survival of patients with heart failure from serum creatinine and ejection fraction alone". BMC Medical Informatics and Decision Making 20, 16 (2020).
 
 ## Task
-*TODO*: Explain the task you are going to be solving with this dataset and the features you will be using for it.
     The task is a two class classification task to predict the DEATH_EVENT column as 0 or 1.
     Various risk factors from diffrent body parameters are recored to predict the death event in the DEATH_EVENT column.
 
@@ -57,11 +52,9 @@
     - [target] death event: if the patient deceased during the follow-up period (boolean)
 
 ## Access
-*TODO*: Explain how you are accessing the data in your workspace.
     The Data was accesed via the Dataset URL: https://archive.ics.uci.edu/ml/machine-learning-databases/00519/heart_failure_clinical_records_dataset.csv and loded into Azure ML Studio via python code in juypter notebook and required tabular Azure ML Dataset was created and consumed as reuired. To avoid duplication same Azure ML DAtaset was used for both hyperdrive method and automl method.
 
 ## Automated ML
-*TODO*: Give an overview of the `automl` settings and configuration you used for this experiment
 ## Classification technique used:
     Multiple Alogritims 
 
@@ -70,30 +63,29 @@
 
 ## Confugration Selected: 
     `
-    automl_settings = {
-        "experiment_timeout_hours" : 0.3,
-        "enable_early_stopping" : True, (Enable early termination if the score is not improving in the short term) 
-        "iteration_timeout_minutes": 5,
-        "max_concurrent_iterations": 4,
-        "max_cores_per_iteration": -1,
-        "primary_metric": 'accuracy',
-        "featurization": 'auto',
-        "verbosity": logging.INFO,
-    }
-    automl_config = AutoMLConfig(
-        experiment_timeout_minutes=30,
-        debug_log = 'automl_errors.log',
-        compute_target=compute_target,
-        task="classification",
-        training_data= train,
-        label_column_name="DEATH_EVENT",    (Collumn to be classified)
-        enable_onnx_compatible_models=True, (to emable saving output model in ONNX format)
-        n_cross_validations= 3,
-        **automl_settings)
+   automl_settings = {
+    "experiment_timeout_hours": 0.5, (Exit Criteria: experiment should continue to run for maximum of .05 hours)
+    "enable_early_stopping": True, (Enable early termination if the score is not improving in the short term) 
+    "iteration_timeout_minutes": 5, (An iteration should continue to run for maximum of 5 minutes)
+    "max_concurrent_iterations": 4, (Maximum 4 iterations should run concurrently)
+    "max_cores_per_iteration": -1, (Use all the possible cores per iteration per child-run)
+    "primary_metric": 'accuracy', (Primary Metric is selected as Accuracy)
+    "featurization": 'auto', (During the preprocessing, data guardrails and featurization steps are performed automatically)
+    "verbosity": logging.INFO, (Verbosity (log level) of log is selected as logging.INFO)
+}
+automl_config = AutoMLConfig(
+    experiment_timeout_minutes=30, (Exit Criteria: Experiment should continue to run for maximum of 30 Minutes)
+    debug_log = 'automl_errors.log', (Selection of file for debug logs)
+    compute_target=compute_target, (Compute Target or the Cluster to run the task on is selected as compute_target)
+    task="classification", (ML Task is selected as Classification)
+    training_data= train, (Training Dataset is selected as train)
+    label_column_name="DEATH_EVENT", (Column to be classified)
+    enable_onnx_compatible_models=True, (To enable saving output model in ONNX format)
+    n_cross_validations= 3, (Since the data set is smaller than 20,000 rows, cross validation approach is preferred for validation with 3 folds)
+    **automl_settings)
+
     `
 ## Results
-*TODO*: What are the results you got with your automated ML model? What were the parameters of the model? How could you have improved it?
-*TODO* Remeber to provide screenshots of the `RunDetails` widget as well as a screenshot of the best model trained with it's parameters.
     The best performing model a model with acuuracy of aproximately .0.8926726726726727 with AUC_weight =  0.9208363636363636 using VotingEnsemble algoritim.
     
     Screenshot 1: RunDetails widget that shows the progress of the training runs of the different experiment
@@ -145,7 +137,6 @@
     In future we can improve the best model by choosing different primary metrics and different classification methods and calculating and comparing the values of mean_squared_error, to study how our predictions have deviated from actual values and, we study mean absolute percent error (MAPE) in detail. We can also study the impact of increasing number of clusters used to study to get faster results. All these could help us in reducing error in our model and help us to study the model much faster. We can also add more data to the model, or we can add more columns. Also, we can make new columns with existing ones with feature engineering and by applying our domain knowledge and obtain better results. Also, we can provide a more user-friendly user interface wile consuming the api’s and the swager documentation. Lot of steps run on command-line can be ran directly from Jyupiter notebook or could be automated in a single script. We do have room to select more hyperparameters to tune in addtion to the two selected and tuned.
 
 ## Hyperparameter Tuning
-*TODO*: What kind of model did you choose for this experiment and why? Give an overview of the types of parameters and their ranges used for the hyperparameter search
     First the data was loaded into dataset and proper compute infra was created to run with suitable hyperdrive configuration. Random Sampling was choosen as it supports early termination of low-performance runs. In random sampling, hyperparameter values are randomly selected from the defined search space.
     
     Random Sampling was choosen as it supports early termination of low-performance runs. In random sampling, hyperparameter values are randomly selected from the defined search space with two hyperparameters '--C' (Reqularization Strength) and '--max_iter' (Maximum iterations to converge).
@@ -159,33 +150,35 @@
     Selected out of multiple runs with same algorititm with diffrent hyperparameters.
 
 ## Confrugration Selected:
-    Primary_metric= 'Accuracy'
-    '
+   `
+   Primary_metric= 'Accuracy'
+    
     early_termination_policy = BanditPolicy(slack_factor = 0.1, evaluation_interval = 1, delay_evaluation=5)
-    (allowable slack = 0.1, frequency for applying the policy = 1, First policy evaluation doene after 5 intervals)
-    ps = RandomParameterSampling(
-        {
-            "--C" :        choice(0.001,0.01,0.1, 0.5, 1,1.5,10,20,50,100,200,500,1000),
-            "--max_iter" : choice(25,50,75,100,200,300)
-        }
-    )
-    src = ScriptRunConfig(source_directory=script_folder,
-                         script='train.py',
-                         compute_target=compute_target,
-                         environment=sklearn_env)
-    hyperdrive_run_config =  HyperDriveConfig(
-        hyperparameter_sampling = ps,
-        primary_metric_name = 'Accuracy',
-        primary_metric_goal = PrimaryMetricGoal.MAXIMIZE, 
-        max_total_runs =  100,
-        max_concurrent_runs = 4,
-        policy = early_termination_policy,
-        run_config = src
-    )
+(allowable slack = 0.1, frequency for applying the policy = 1, First policy evaluation done after 5 intervals)
+ps = RandomParameterSampling(
+    {
+        "--C" :        choice(0.001,0.01,0.1, 0.5, 1,1.5,10,20,50,100,200,500,1000), (Reqularization Strength search space)
+
+        "--max_iter" : choice(25,50,75,100,200,300) (Maximum iterations to converge search space)
+
+    }
+)
+src = ScriptRunConfig(source_directory=script_folder,
+                     script='train.py',
+                     compute_target=compute_target, (Compute Target or the Cluster to run the task on is selected as compute_target)
+                     environment=sklearn_env (Environment for Sklearn selected as sklearn_env)
+          )
+hyperdrive_run_config =  HyperDriveConfig(
+    hyperparameter_sampling = ps,  (Hyperparameters)
+    primary_metric_name = 'Accuracy', (Primary Metric is selected as Accuracy)
+    primary_metric_goal = PrimaryMetricGoal.MAXIMIZE,  (Primary Metric Goal is selected as to maximize Accuracy)
+    max_total_runs = 100, (Maximum 100 Child Runs)
+    max_concurrent_runs = 4, (Maximum 4 iterations should run concurrently)
+    policy = early_termination_policy,
+    run_config = src
+)
     `
 ## Results
-*TODO*: What are the results you got with your model? What were the parameters of the model? How could you have improved it?
-*TODO* Remeber to provide screenshots of the `RunDetails` widget as well as a screenshot of the best model trained with it's parameters.
     With the above selected confugration the Hyperdrive Pipeline shows best results with --c = 500 and --max_iter = 50 giving accuracy of  0.8133333333333334(approximate).
     
      Screenshot 1: RunDetails Wizard Completed
@@ -227,7 +220,6 @@
     In future we can improve the best model by choosing different primary metrics and different classification methods and calculating and comparing the values of mean_squared_error, to study how our predictions have deviated from actual values and, we study mean absolute percent error (MAPE) in detail. We can also study the impact of increasing number of clusters used to study to get faster results. All these could help us in reducing error in our model and help us to study the model much faster. We can also add more data to the model, or we can add more columns. Also, we can make new columns with existing ones with feature engineering and by applying our domain knowledge and obtain better results. Also, we can provide a more user-friendly user interface wile consuming the api’s and the swager documentation. Lot of steps run on command-line can be ran directly from Jyupiter notebook or could be automated in a single script. We do have room to select more hyperparameters to tune in addtion to the two selected and tuned.
     
 ## Model Deployment
-*TODO*: Give an overview of the deployed model and instructions on how to query the endpoint with a sample input.
     The best performing model was a model with acuuracy of aproximately .0.8926726726726727 with AUC_weight =  0.9208363636363636 using VotingEnsemble algoritim obtained via AutoML Method. The respective model was registered and deployed as rest endpoint via a scoring uri and the deployment was verified by sending two sets of data picked from the original dataset and sent as JSON data to the service and the service predicted the output correctly.
     
     Screenshot 1: Active Endpoint for Depoloyed Model
@@ -241,18 +233,10 @@
      style="float: left; margin-right: 10px;" />
 
 ## Screen Recording
-*TODO* Provide a link to a screen recording of the project in action. Remember that the screencast should demonstrate:
- - A working model
- - Demo of the deployed  model
- - Demo of a sample request sent to the endpoint and its response
- 
      Full Recording : https://1drv.ms/u/s!AqbnW4s20s0s1gynpKjiB2YCDMGI?e=efm01A
-     
      Short Recording (5 Minitues) : https://1drv.ms/v/s!AqbnW4s20s0s1grRH4rLy6A0vbe7
 
 ## Standout Suggestions
-*TODO (Optional):* This is where you can provide information about any standout suggestions that you have attempted.
-   
     Convert Your Model to ONNX Format
     a) Hyperdrvive Method: The code to comvert and save the .joblib model to .onnx model was excecuted from the jupyter notebook.
     b) AutoML Method: The automl config was sent a setting to enable the onnx output via the jupyter code and respective ..onnx model was saved in .onnx format.
