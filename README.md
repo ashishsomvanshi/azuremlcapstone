@@ -62,33 +62,33 @@
     Selected out of multiple runs with diffrent algorititms with there auto generated hyperparameters. 
 
 ## Confugration Selected: 
-`
-   automl_settings = {
-    "experiment_timeout_hours": 0.5, (Exit Criteria: experiment should continue to run for maximum of .05 hours)
-    "enable_early_stopping": True, (Enable early termination if the score is not improving in the short term) 
-    "iteration_timeout_minutes": 5, (An iteration should continue to run for maximum of 5 minutes)
-    "max_concurrent_iterations": 4, (Maximum 4 iterations should run concurrently)
-    "max_cores_per_iteration": -1, (Use all the possible cores per iteration per child-run)
-    "primary_metric": 'accuracy', (Primary Metric is selected as Accuracy)
-    "featurization": 'auto', (During the preprocessing, data guardrails and featurization steps are performed automatically)
-    "verbosity": logging.INFO, (Verbosity (log level) of log is selected as logging.INFO)
-}
-automl_config = AutoMLConfig(
-    experiment_timeout_minutes=30, (Exit Criteria: Experiment should continue to run for maximum of 30 Minutes)
-    debug_log = 'automl_errors.log', (Selection of file for debug logs)
-    compute_target=compute_target, (Compute Target or the Cluster to run the task on is selected as compute_target)
-    task="classification", (ML Task is selected as Classification)
-    training_data= train, (Training Dataset is selected as train)
-    label_column_name="DEATH_EVENT", (Column to be classified)
-    enable_onnx_compatible_models=True, (To enable saving output model in ONNX format)
-    n_cross_validations= 3, (Since the data set is smaller than 20,000 rows, cross validation approach is preferred for validation with 3 folds)
-    **automl_settings)
+     `   
+     automl_settings = {
+         "experiment_timeout_hours": 0.5, (Exit Criteria: experiment should continue to run for maximum of .05 hours)
+         "enable_early_stopping": True, (Enable early termination if the score is not improving in the short term) 
+         "iteration_timeout_minutes": 5, (An iteration should continue to run for maximum of 5 minutes)
+         "max_concurrent_iterations": 4, (Maximum 4 iterations should run concurrently)
+         "max_cores_per_iteration": -1, (Use all the possible cores per iteration per child-run)
+         "primary_metric": 'accuracy', (Primary Metric is selected as Accuracy)
+         "featurization": 'auto', (During the preprocessing, data guardrails and featurization steps are performed automatically)
+         "verbosity": logging.INFO, (Verbosity (log level) of log is selected as logging.INFO)
+     }
+     automl_config = AutoMLConfig(
+         experiment_timeout_minutes=30, (Exit Criteria: Experiment should continue to run for maximum of 30 Minutes)
+         debug_log = 'automl_errors.log', (Selection of file for debug logs)
+         compute_target=compute_target, (Compute Target or the Cluster to run the task on is selected as compute_target)
+         task="classification", (ML Task is selected as Classification)
+         training_data= train, (Training Dataset is selected as train)
+         label_column_name="DEATH_EVENT", (Column to be classified)
+         enable_onnx_compatible_models=True, (To enable saving output model in ONNX format)
+         n_cross_validations= 3, (Since the data set is smaller than 20,000 rows, cross validation approach is preferred for validation with 3 folds)
+         **automl_settings)
 
-`
+     `
 ## Results
     The best performing model a model with acuuracy of aproximately .0.8926726726726727 with AUC_weight =  0.9208363636363636 using VotingEnsemble algoritim.
-    
-    Screenshot 1: RunDetails widget that shows the progress of the training runs of the different experiment
+
+     Screenshot 1: RunDetails widget that shows the progress of the training runs of the different experiment
 <img src="https://github.com/ashishsomvanshi/azuremlcapstone/blob/master/images/Automl%20and%20Active%20Endpoint/AutoML%20Best%20Run%20Details%20Notebook.jpg"
      alt="RunDetails widget that shows the progress of the training runs of the different experiment"
      style="float: left; margin-right: 10px;" />
