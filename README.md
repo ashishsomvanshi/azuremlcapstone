@@ -62,7 +62,7 @@
     Selected out of multiple runs with diffrent algorititms with there auto generated hyperparameters. 
 
 ## Confugration Selected: 
-    `
+`
    automl_settings = {
     "experiment_timeout_hours": 0.5, (Exit Criteria: experiment should continue to run for maximum of .05 hours)
     "enable_early_stopping": True, (Enable early termination if the score is not improving in the short term) 
@@ -84,7 +84,7 @@ automl_config = AutoMLConfig(
     n_cross_validations= 3, (Since the data set is smaller than 20,000 rows, cross validation approach is preferred for validation with 3 folds)
     **automl_settings)
 
-    `
+`
 ## Results
     The best performing model a model with acuuracy of aproximately .0.8926726726726727 with AUC_weight =  0.9208363636363636 using VotingEnsemble algoritim.
     
@@ -150,37 +150,37 @@ automl_config = AutoMLConfig(
     Selected out of multiple runs with same algorititm with diffrent hyperparameters.
 
 ## Confrugration Selected:
-   `
-   Primary_metric= 'Accuracy'
-    
-    early_termination_policy = BanditPolicy(slack_factor = 0.1, evaluation_interval = 1, delay_evaluation=5)
-(allowable slack = 0.1, frequency for applying the policy = 1, First policy evaluation done after 5 intervals)
-ps = RandomParameterSampling(
-    {
-        "--C" :        choice(0.001,0.01,0.1, 0.5, 1,1.5,10,20,50,100,200,500,1000), (Reqularization Strength search space)
+     `
+     Primary_metric= 'Accuracy'
 
-        "--max_iter" : choice(25,50,75,100,200,300) (Maximum iterations to converge search space)
+     early_termination_policy = BanditPolicy(slack_factor = 0.1, evaluation_interval = 1, delay_evaluation=5)
+     (allowable slack = 0.1, frequency for applying the policy = 1, First policy evaluation done after 5 intervals)
+     ps = RandomParameterSampling(
+         {
+             "--C" :        choice(0.001,0.01,0.1, 0.5, 1,1.5,10,20,50,100,200,500,1000), (Reqularization Strength search space)
 
-    }
-)
-src = ScriptRunConfig(source_directory=script_folder,
-                     script='train.py',
-                     compute_target=compute_target, (Compute Target or the Cluster to run the task on is selected as compute_target)
-                     environment=sklearn_env (Environment for Sklearn selected as sklearn_env)
-          )
-hyperdrive_run_config =  HyperDriveConfig(
-    hyperparameter_sampling = ps,  (Hyperparameters)
-    primary_metric_name = 'Accuracy', (Primary Metric is selected as Accuracy)
-    primary_metric_goal = PrimaryMetricGoal.MAXIMIZE,  (Primary Metric Goal is selected as to maximize Accuracy)
-    max_total_runs = 100, (Maximum 100 Child Runs)
-    max_concurrent_runs = 4, (Maximum 4 iterations should run concurrently)
-    policy = early_termination_policy,
-    run_config = src
-)
-    `
+             "--max_iter" : choice(25,50,75,100,200,300) (Maximum iterations to converge search space)
+
+         }
+     )
+     src = ScriptRunConfig(source_directory=script_folder,
+                          script='train.py',
+                          compute_target=compute_target, (Compute Target or the Cluster to run the task on is selected as compute_target)
+                          environment=sklearn_env (Environment for Sklearn selected as sklearn_env)
+               )
+     hyperdrive_run_config =  HyperDriveConfig(
+         hyperparameter_sampling = ps,  (Hyperparameters)
+         primary_metric_name = 'Accuracy', (Primary Metric is selected as Accuracy)
+         primary_metric_goal = PrimaryMetricGoal.MAXIMIZE,  (Primary Metric Goal is selected as to maximize Accuracy)
+         max_total_runs = 100, (Maximum 100 Child Runs)
+         max_concurrent_runs = 4, (Maximum 4 iterations should run concurrently)
+         policy = early_termination_policy,
+         run_config = src
+     )
+     `
 ## Results
     With the above selected confugration the Hyperdrive Pipeline shows best results with --c = 500 and --max_iter = 50 giving accuracy of  0.8133333333333334(approximate).
-    
+        
      Screenshot 1: RunDetails Wizard Completed
 <img src="https://github.com/ashishsomvanshi/azuremlcapstone/blob/master/images/Hyperdrive/Hyperdrive%20RunDetails%20Wizard%20after%20Completion.jpg"
      alt="RunDetails Wizard Completed"
